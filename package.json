@@ -1,0 +1,17 @@
+{
+  "name": "zwigato_server",
+  "version": "1.0.0",
+  "description": "Zwigato Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kapil Yadav",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "cross-fetch": "^4.0.0",
+    "express": "^4.19.2",
+    "node": "^18.20.0"
+  }
+}
