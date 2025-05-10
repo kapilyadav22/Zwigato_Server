@@ -66,13 +66,13 @@ app.get('/', (req, res) => {
     res.json({ "test": "Welcome to Zwigato!" });
 });
 
-const keyPath =  '/etc/ssl/private.key';
-const certPath = '/etc/ssl/certificate.crt';
+const key = fs.readFileSync(process.env.SSL_KEY_PATH);
+const cert = fs.readFileSync(process.env.SSL_CERT_PATH);
 
 try {
     const options = {
-        key: fs.readFileSync(keyPath),
-        cert: fs.readFileSync(certPath)
+        key: fs.readFileSync(key),
+        cert: fs.readFileSync(cert)
     };
     
     https.createServer(options, app).listen(port, () => {
